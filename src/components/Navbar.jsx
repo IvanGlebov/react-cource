@@ -5,19 +5,19 @@ function Navbar(){
     return(
         <nav className='nav'>
             <div className='link profile'>
-                <a>Profile</a>
+                <a href='#'>Profile</a>
             </div>
             <div className='link messages'>
-                <a>Messages</a>
+                <a href='#'>Messages</a>
             </div>
             <div className='link news'>
-                <a>News</a>
+                <a href='#'>News</a>
             </div>
             <div className='link music'>
-                <a>Music</a>
+                <a href='#'>Music</a>
             </div>
             <div className='link setting'>
-                <a>Settings</a>
+                <a href='#'>Settings</a>
             </div>
         </nav>
     );

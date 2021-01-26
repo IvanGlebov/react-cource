@@ -1,7 +1,22 @@
 .link {
     padding: 20px 20px 10px;
     color: #FFFFFF;
+    /*text-decoration: none;*/
 }
+
+
+.link a {
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+
+.link a:hover {
+    color: #06224A;
+    transition: 0.5s;
+}
+
 
 .profile {
     background-color: #0245A3;
