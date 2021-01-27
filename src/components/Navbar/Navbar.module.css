@@ -2,17 +2,27 @@
     grid-area: n;
     background-color: #8FBAF3;
     border-radius: 30px;
+    height: 260px;
 }
 
 .link {
-    padding: 20px 20px 10px;
     color: #FFFFFF;
+    transition: 0.5s;
 }
 
 
 .link a {
+    padding: 20px 50px 14px;
+    width: 165px;
     color: #FFFFFF;
     text-decoration: none;
+    display: inline-block;
+    transition: 0.5s;
+}
+.link a.active {
+    background-color: #0245A3;
+    border-radius: 30px;
+    color: #000000;
     transition: 0.5s;
 }
 
@@ -23,23 +33,20 @@
 }
 
 
-.profile {
-    background-color: #0245A3;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
-}
-
 .messages {
 
 }
+
 
 .news {
 
 }
 
+
 .music {
 
 }
+
 
 .settings {
 

@@ -1,7 +1,31 @@
 .postText {
     color: black;
+    border: 1px solid #999999;
+    padding: 20px;
+    border-radius: 30px;
 }
 
+.metrics {
+    padding-top: 20px;
+    padding-left: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+
 .Post {
+    padding-top: 10px;
+    display: grid;
+    grid-template-columns: 10fr 3fr;
+}
+.likes {
+
+}
+
+.reply {
+
+}
+
+.views {
 
 }

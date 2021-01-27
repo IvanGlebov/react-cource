@@ -3,7 +3,7 @@ import profileImage from "./images/iota2.png"
 import s from "./Profile.module.css"
 import MyPosts from "./MyPosts/MyPosts";
 
-const Profile = () => {
+const Profile = (data) => {
     return (
         <div>
             <div className={s.profileWallpaper}>
@@ -15,7 +15,15 @@ const Profile = () => {
                     <img src={profileImage}/>
                 </div>
                 <div className={s.description}>
-                    description
+                    <div className={s.name}>
+                        {data.name}
+                    </div>
+                    <div className={s.birthDate}>
+                        Born in {data.birthDate}
+                    </div>
+                    <div className={s.city}>
+                        Lives in {data.city}
+                    </div>
                 </div>
             </div>
 

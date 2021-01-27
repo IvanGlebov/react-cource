@@ -7,8 +7,16 @@ const Post = (data) => {
             <div className={s.postText}>
                 {data.message}
             </div>
-            <div>
-                <span>Likes { data.likes }</span>
+            <div className={s.metrics}>
+                <div className={s.likes}>
+                    <span>L{data.likes}</span>
+                </div>
+                <div className={s.reply}>
+                    <span>R{data.reply}</span>
+                </div>
+                <div className={s.views}>
+                    <span>V{data.views}</span>
+                </div>
             </div>
 
         </div>

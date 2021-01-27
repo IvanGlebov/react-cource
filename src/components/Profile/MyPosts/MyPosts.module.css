@@ -1,3 +1,48 @@
-.Posts {
+.myPosts {
+    padding: 10px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 300;
+    font-size: 40px;
+}
 
+.textInput {
+    padding-left: 10px;
+}
+
+.textInput textarea {
+    border: 1px solid #999999;
+    padding: 2px 20px;
+    resize: none;
+    border-radius: 30px;
+    width: 600px;
+    height: 60px;
+}
+
+.postPost {
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.postPost button{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    border: 0 solid #000000;
+    border-radius: 20px;
+    height: 40px;
+    width: 100px;
+    background-color: #8FBAF3;
+    transition: 0.5s;
+}
+
+.postPost button:hover {
+    background-color: #0245A3;
+    transition: 0.5s;
+    color: #FFFFFF;
+}
+
+.Posts {
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
 }
