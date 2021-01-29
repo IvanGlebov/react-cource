@@ -6,11 +6,37 @@
 
 
 .dialog a {
+    /*background-color: #8FBAF3;*/
+    /*opacity: 0.5;*/
     display: inline-block;
-    padding: 20px;
+    /*padding: 20px;*/
+    min-height: 60px;
+    min-width: 250px;
     border: 1px solid #000000;
     width: 180px;
     color: #000000;
     text-decoration: none;
     border-radius: 30px;
+}
+
+.dialog a img {
+    width: 56px;
+    height: 56px;
+    margin-top: 2px;
+    margin-left: 2px;
+    /*padding-left: 10px;*/
+    /*padding-top: 20px;*/
+    border-radius: 30px;
+    /*object-fit: cover;*/
+    object-fit: cover;
+    /*overflow: hidden;*/
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+}
+.name {
+    padding-left: 5px;
+    padding-top: 5px;
 }

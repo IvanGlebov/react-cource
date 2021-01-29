@@ -1,5 +1,4 @@
 import './App.css';
-
 import Header from "./components/Header/Header";
 import Navbar from "./components/Navbar/Navbar";
 import Profile from "./components/Profile/Profile";
@@ -11,17 +10,25 @@ import Settings from "./components/Settings/Settings";
 
 
 function App(data) {
+
+
+
     return (
         <BrowserRouter>
             <div className='app-wrapper'>
                 <Header/>
-                <Navbar/>
+                <Navbar recentFriends={data.state.navbar.recentFriends}/>
                 <div className='app-wrapper-content'>
-                    <Route path='/profile' component={() => <Profile name="Ivan Glebov" birthDate="2002" city="Vsevolozhsk"/>}/>
-                    <Route path='/messages' component={Dialogs}/>
-                    <Route path='/news' component={News}/>
-                    <Route path='/music' component={Music}/>
-                    <Route path='/settings' component={Settings}/>
+
+                    <Route path='/profile'
+                           render={() => <Profile profilePage={data.state.profilePage}/>}/>
+
+                    <Route path='/messages'
+                           render={() => <Dialogs messagesPage={data.state.messagesPage}/>}/>
+
+                    <Route path='/news' render={News}/>
+                    <Route path='/music' render={Music}/>
+                    <Route path='/settings' render={Settings}/>
                 </div>
 
             </div>

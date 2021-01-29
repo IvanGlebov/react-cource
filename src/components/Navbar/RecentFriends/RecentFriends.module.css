@@ -1,0 +1,11 @@
+.recentFriends a {
+    transition: 0.5s;
+    width: auto;
+    padding: 14px 0 0 20px;
+    /*display: inline-block;*/
+    /*float: left;*/
+}
+.recentFriends a:hover{
+    transform: scale(1.05);
+    transition: 0.5s;
+}

@@ -2,13 +2,10 @@ import React from "react";
 import s from "./MyPosts.module.css"
 import Post from "./Posts/Post.jsx"
 
-const MyPosts = () => {
+const MyPosts = (data) => {
 
-    let postsData = [
-        {id: 1, message: 'text1', likes: 15, reply: 5, views: 20},
-        {id: 2, message: 'text2', likes: 20, reply: 4, views: 40}
-    ]
-    let postElements = postsData
+
+    let postElements = data.postsData
         .map(post => <Post
             message={post.message}
             likes={post.likes}
