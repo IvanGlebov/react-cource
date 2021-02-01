@@ -1,17 +1,20 @@
 import React from 'react'
 import s from './Dialogs.module.css'
-
 import Dialog from "./Dialog/Dialog";
-
 import Message from "./Messages/Message";
-import {sendMessageActionCreater, storeMessageTextActionCreater} from "../../redux/reducers/messagesReducer";
 
 
 const Dialogs = (data) => {
     // debugger;
     let usersElements = data.messagesPage.usersData
-        .map(User => <Dialog name={User.name} id={User.id}/>);
-    let messagesElements = data.messagesPage.messagesData.map(message => <Message content={message.content} id={message.id} messageType={message.messageType}/>);
+        .map(User => <Dialog name={User.name}
+                             id={User.id}
+                             key = {User.id}/>);
+    let messagesElements = data.messagesPage.messagesData
+        .map(message => <Message content={message.content}
+                                 id={message.id}
+                                 messageType={message.messageType}
+                                 key = {message.id}/>);
 
     let sendMessage = () => {
         data.sendMessage()
@@ -42,4 +45,4 @@ const Dialogs = (data) => {
     );
 }
 
-export default Dialogs;
+export default Dialogs

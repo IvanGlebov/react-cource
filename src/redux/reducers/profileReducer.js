@@ -18,7 +18,7 @@ let initialState = {
 const profileReducer = (state = initialState, action) => {
     switch (action.type) {
         case ADD_POST:
-            // debugger;
+        {
             let newPost = {
                 id: 4,
                 message: state.newPostText,
@@ -26,22 +26,26 @@ const profileReducer = (state = initialState, action) => {
                 reply: 3,
                 views: 60
             };
+            let stateCopy = {...state}
+            stateCopy.postData = [...state.postsData]
             if (newPost.message !== '') {
-                state.postsData.push(newPost);
-                state.newPostText = '';
+                stateCopy.postsData.push(newPost);
+                stateCopy.newPostText = '';
             } else {
                 alert("ERROR! Can't create empty post")
             }
-            return state
-            // break;
+            return stateCopy
+        }
         case SAVE_POST_STATE:
-            state.newPostText = action.newValue;
-            return state
-            // break;
+        {
+            let stateCopy = {...state}
+            stateCopy.newPostText = action.newValue;
+            return stateCopy
+
+        }
         default:
             return state
     }
-    // return state
 }
 
 export default profileReducer

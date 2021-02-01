@@ -44,15 +44,22 @@ const messagesReducer = (state = initialState, action) => {
                 messageType: "right"
             }
             if (newMessage.content !== '') {
-                state.messagesData.push(newMessage)
-                state.newMessageText = ''
+                return {
+                    ...state,
+                    newMessageText: '',
+                    messagesData: [...state.messagesData, newMessage]
+                }
             } else {
                 alert("ERROR! Can't send empty message")
+                return state
             }
-            return state
+
+
         case STORE_MESSAGE_TEXT:
-            state.newMessageText = action.newValue;
-            return state
+            return {
+                ...state,
+                newMessageText: action.newValue
+            }
         default:
             return state
     }
