@@ -1,16 +1,25 @@
 import React from 'react'
 import s from './Dialogs.module.css'
-// import {NavLink} from "react-router-dom";
+
 import Dialog from "./Dialog/Dialog";
-// import Messages from "./Messages/Messages";
-import Message from "./Messages/Message/Message";
+
+import Message from "./Messages/Message";
+import {sendMessageActionCreater, storeMessageTextActionCreater} from "../../redux/reducers/messagesReducer";
+
 
 const Dialogs = (data) => {
-
+    // debugger;
     let usersElements = data.messagesPage.usersData
         .map(User => <Dialog name={User.name} id={User.id}/>);
+    let messagesElements = data.messagesPage.messagesData.map(message => <Message content={message.content} id={message.id} messageType={message.messageType}/>);
 
-    let messagesElements = data.messagesPage.messagesData.map(message => <Message content={message.content} id={message.id}/>);
+    let sendMessage = () => {
+        data.sendMessage()
+    }
+
+    let onMessageChange = (e) => {
+        data.onMessageChange(e.target.value)
+    }
 
     return (
         <div className={s.dialogs}>
@@ -18,7 +27,16 @@ const Dialogs = (data) => {
                 {usersElements}
             </div>
             <div className={s.messages}>
-                {messagesElements}
+                <div>
+                    {messagesElements}
+                </div>
+                <div className={s.sendMessageBlock}>
+                    <textarea onChange={onMessageChange}
+                              value={data.messagesPage.newMessageText}
+                              placeholder='Touch to write'/>
+                    <button onClick={sendMessage}
+                        className={s.sendMessageButton}>Send</button>
+                </div>
             </div>
         </div>
     );

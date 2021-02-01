@@ -1,0 +1,20 @@
+.message {
+    margin: 10px;
+    border-radius: 30px;
+    border: 1px solid #000000;
+    padding: 10px;
+}
+
+.left {
+    background-color: #8FBAF3;
+    /*float: left;*/
+    max-width: 300px;
+}
+
+.right {
+    max-width: 300px;
+    /*float: right;*/
+    margin-left: auto;
+    margin-right: 0;
+    text-align: right;
+}

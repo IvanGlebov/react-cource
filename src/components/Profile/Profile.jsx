@@ -1,12 +1,12 @@
 import React from 'react'
 import profileImage from "./images/iota2.png"
 import s from "./Profile.module.css"
-import MyPosts from "./MyPosts/MyPosts";
+import MyPostsContainer from "./MyPosts/MyPostsContainer";
+
 
 const Profile = (data) => {
-
-
     // debugger;
+    let state = data.store.getState()
     return (
         <div>
             <div className={s.profileWallpaper}>
@@ -19,21 +19,20 @@ const Profile = (data) => {
                 </div>
                 <div className={s.description}>
                     <div className={s.name}>
-                        {data.profilePage.user.name}
+                        {state.profilePage.user.name}
                     </div>
                     <div className={s.birthDate}>
-                        Born in {data.profilePage.user.birthDate}
+                        Born in {state.profilePage.user.birthDate}
                     </div>
                     <div className={s.city}>
-                        Lives in {data.profilePage.user.city}
+                        Lives in {state.profilePage.user.city}
                     </div>
                 </div>
             </div>
 
-            <MyPosts postsData={data.profilePage.postsData} />
-
+            <MyPostsContainer store={data.store} />
         </div>
     );
 }
 
-export default Profile;
+export default Profile
