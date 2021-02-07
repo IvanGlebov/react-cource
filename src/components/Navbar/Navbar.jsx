@@ -24,6 +24,9 @@ const Navbar = (data) => {
             <div className={s.link + ' ' + s.settings}>
                 <NavLink to='/settings' activeClassName={s.active}>Settings</NavLink>
             </div>
+            <div className={s.link + ' ' + s.users}>
+                <NavLink to='/users' activeClassName={s.active}>Users</NavLink>
+            </div>
             <div className={s.link + ' ' + s.friends}>
                 <NavLink to='/friends' activeClassName={s.active}>Friends</NavLink>
                 <RecentFriends recentFriends={data.recentFriends} />

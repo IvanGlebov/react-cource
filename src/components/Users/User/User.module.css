@@ -1,0 +1,75 @@
+.userContainer {
+    display: grid;
+    grid-template-columns: 2fr 14fr 2fr;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+
+.userImage img {
+    object-fit: cover;
+    height: 80px;
+    width: 100px;
+    border-radius: 30px;
+    border: 1px solid #000000;
+}
+
+.userInfo {
+    margin-right: 20px;
+    margin-left: 20px;
+    border-radius: 30px;
+    height: 80px;
+    display: grid;
+    grid-template-areas:
+            "n l"
+            "s l";
+    padding-left: 20px;
+    parrind-top: 20px;
+    border: 1px solid #000000;
+}
+
+.followUnfollow {
+
+}
+
+.followUnfollow button {
+    border: 1px solid #000000;
+    margin-top: 10px;
+    height: 60px;
+    width: 80px;
+    border-radius: 20px;
+}
+
+.followed {
+    background-color: #999999;
+}
+
+.unfollowed{
+    background-color: #8FBAF3;
+}
+
+.userName {
+    padding-top: 20px;
+    grid-area: n;
+}
+
+.status {
+    grid-area: s;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.location {
+    padding-top: 20px;
+    padding-right: 20px;
+    grid-area: l;
+}
+
+.country {
+    text-align: right;
+}
+
+.city {
+    padding-top: 5px;
+    text-align: right;
+}

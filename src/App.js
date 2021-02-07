@@ -7,6 +7,7 @@ import Music from "./components/Misuc/Music";
 import Settings from "./components/Settings/Settings";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
 import NavbarContainer from "./components/Navbar/RecentFriends/NavbarContainer";
+import UsersContainer from "./components/Users/UsersContainer";
 
 
 function App(data) {
@@ -20,6 +21,7 @@ function App(data) {
                 <Route path='/news' render={News}/>
                 <Route path='/music' render={Music}/>
                 <Route path='/settings' render={Settings}/>
+                <Route path='/users' render={() => <UsersContainer/>}/>
             </div>
         </div>
     );
